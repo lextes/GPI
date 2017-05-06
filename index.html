@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html  ng-app="ejercicio">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="shortcut icon" href="images/favicon.ico">
+  	<title>Ejercicio GPI</title>
+  	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,900' rel='stylesheet' type='text/css'>
+  	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+	<div class="container" style="margin-top: 40px;">
+		 <div class="row"> 
+            <div class="col-md-6">
+                <ul class="nav nav-tabs">
+			         <li class="active"><a href="#add" data-toggle="tab">Add Persons</a></li>
+			         <li><a href="#persons" data-toggle="tab">Persons</a></li>
+			         <li><a href="#personsCar" data-toggle="tab">Persons / car</a></li>
+		        </ul>
+            </div>
+            <div class="col-md-6" align="right">
+                <img src="images/point2.png">
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<div class="tab-content">
+			<div class="tab-pane fade in active" id="add">
+            
+                <!-- Avatar -->
+                <div class="row">
+                    <div class="col-md-1" style="margin-top: 7px">
+                        <img align="right" src="images/people1.png">
+                    </div>
+                    <div class="col-md-2">
+                        <h3>Add persons</h3>
+                    </div>
+                </div>
+				
+                <!-- TAB Add persons -->
+                <form>
+				  <div class="form-group">
+				    <label for="InputName">Name</label>
+				    <input type="text" class="form-control " id="InputName" placeholder="Name">
+				  </div><br />
+				  <div class="form-group">
+				    <label for="exampleInputName2">First Name</label>
+				    <input type="text" class="form-control" id="InputName" placeholder="First Name">
+				  </div><br />
+				  <div class="form-group">
+				    <label for="InputName3">Second Name</label>
+				    <input type="text" class="form-control" id="InputName3" placeholder="Second Name">
+				  </div><br />
+				  <div class="form-group">
+				    <label for="InputBirth">Birth date</label>
+				    <input type="text" class="form-control" id="InputBirth" placeholder="Birth date">
+				  </div>
+				  <button type="submit" class="btn btn-primary pull-right">Register</button>
+				</form>
+			</div>
+
+            <!-- TAB Persons -->
+			<div class="tab-pane fade" id="persons">
+
+            <!-- Avatar -->
+            <div class="row">
+                <div class="col-md-1" style="margin-top: 19px">
+                    <img align="right" src="images/data.png">
+                </div>
+                <div class="col-md-2">
+                    <h3>Edit data and registered cars</h3>
+                </div>
+            </div>
+                
+				<table class="table table-hover">
+					<tr>
+						<th>Name</th>
+						<th>Last Name</th>
+						<th>Second Name</th>
+                        <th>Birth</th>
+                        <th>Edit</th>                     
+					</tr>
+					<tr>
+						<td><a href="#editPerson" data-toggle="tab">Maggie</a></td>
+						<td><a href="#editPerson" data-toggle="tab">Coleman</a></td>
+						<td><a href="#editPerson" data-toggle="tab">Trump</a></td>
+                        <td><a href="#editPerson" data-toggle="tab">5/02/1970</a></td>
+                        <td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Houston</td>
+						<td>Have</td>
+						<td>Trump</td>
+                        <td>13/12/2000</td>
+                        <td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Stephanie</td>
+						<td>Calamargo</td>
+						<td>Tutis</td>
+                        <td>20/10/1980</td>
+                        <td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Hope</td>
+						<td>Resendiz</td>
+						<td>Icaro</td>
+                        <td>7/8/1990</td>
+                        <td><input type="checkbox"></td>
+					</tr>
+				</table>
+
+               <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-2">Edit</button>
+			</div>
+
+            <!-- Popup box for Persons -->
+            <div class="container">
+                <div class="modal" id="modal-2" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title">Edit person</h3>
+                            </div>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="InputName">Name</label>
+                                    <input type="text" class="form-control " id="InputName" placeholder="Name">
+                                </div><br />
+                                <div class="form-group">
+                                    <label for="exampleInputName2">First Name</label>
+                                    <input type="text" class="form-control" id="InputName" placeholder="First Name">
+                                </div><br />
+                                <div class="form-group">
+                                    <label for="InputName3">Second Name</label>
+                                    <input type="text" class="form-control" id="InputName3" placeholder="Second Name">
+                                </div><br />
+                                <div class="form-group">
+                                    <label for="InputBirth">Birth date</label>
+                                    <input type="text" class="form-control" id="InputBirth" placeholder="Birth date">
+                                </div>
+                            </form>
+                            <form class="form-group">
+                                <h3>Register a car</h3>
+                                <div class="form-group">
+                                    <label for="InputBrand">Brand</label>
+                                    <input type="text" class="form-control" id="InputBrand" placeholder="Brand">
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputNModel">Model </label>
+                                    <input type="text" class="form-control" id="InputModel" placeholder="Model">
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputYear">Year</label>
+                                    <input type="text" class="form-control" id="InputYear" placeholder="Year">
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputColor">Color</label>
+                                    <input type="text" class="form-control" id="InputColor" placeholder="Color">
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <a href="" class="btn btn-primary" data-dismiss="modal">Close</a>
+                                <a href="" class="btn btn-danger" data-dismiss="modal">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
+            <!-- TAB Persons Cars -->
+			<div class="tab-pane fade" id="personsCar">
+
+            <!-- Avatar -->
+            <div class="row">
+                <div class="col-md-1" style="margin-top: 19px">
+                    <img align="right" src="images/car.png">
+                </div>
+                <div class="col-md-2">
+                    <h3>Choose a person to edit your registered cars</h3>
+                </div>
+            </div>
+            	<table class="table table-hover">
+					<tr>
+						<th>Name</th>
+						<th>Last Name</th>
+						<th>Second Name</th>
+						<th>Registered cars</th>
+					</tr>
+					<tr>
+						<td><a href="#edit" data-toggle="tab">Houston</a></td>
+						<td><a href="#edit" data-toggle="tab">Have</a></td>
+						<td><a href="#edit" data-toggle="tab">Trouble</a></td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>Maggie</td>
+						<td>Coleman</td>
+						<td>Trump</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>Stephanie</td>
+						<td>Calamargo</td>
+						<td>Tutis</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Hope</td>
+						<td>Resendiz</td>
+						<td>Icaro</td>
+						<td>3</td>
+					</tr>
+				</table>
+			</div>
+
+      		<!-- Edit Persons and register Car 2-->
+		    <div class="tab-pane fade" id="edit"><br />
+				
+			<!-- Avatar -->
+            <div class="row">
+                <div class="col-md-1" style="margin-top: 19px">
+                    <img align="right" src="images/girl.png">
+                </div>
+                <div class="col-md-2">
+                    <h3>Houston Have Trouble</h3>
+					<h4>Registered cars</h4>
+                </div>
+            </div>
+			<table class="table table-hover">
+					<tr>
+						<th>Brand</th>
+						<th>Model</th>
+						<th>Año</th>
+						<th>Color</th>
+						<th>Delete</th>
+					</tr>
+					<tr>
+						<td>Volkswagen</td>
+						<td>Sedan</td>
+						<td>1958</td>
+						<td>White</td>
+						<td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Volkswagen</td>
+						<td>Combi</td>
+						<td>1945</td>
+						<td>Pink</td>
+						<td><input type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Nissan</td>
+						<td>Sentra</td>
+						<td>2010</td>
+						<td>Grey</td>
+						<td><input type="checkbox"></td>
+					</tr>
+
+				</table>
+				
+				<button class="btn btn-danger pull-right">Save </button>
+				<button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-1">Add new car</button>
+				<button class="btn btn-primary pull-right" id="personsCar">Back </button>
+				
+		
+            <!-- Popup box for register car -->
+			<div class="container">
+				<div class="modal" id="modal-1" tabindex="-1" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal">&times;</button>
+								<h3 class="modal-title">Add new car</h3>
+							</div>
+
+							<form>
+							  <div class="form-group">
+							    <label for="InputBrand">Brand</label>
+							    <input type="text" class="form-control" id="InputBrand" placeholder="Brand">
+							  </div>
+							  <div class="form-group">
+							    <label for="InputModel">Model</label>
+							    <input type="text" class="form-control" id="InputModel" placeholder="Model">
+							  </div>
+							  <div class="form-group">
+							    <label for="InputYear">Year</label>
+							    <input type="text" class="form-control" id="InputYear" placeholder="Year">
+							  </div>
+							  <div class="form-group">
+							    <label for="InputColor">Color</label>
+							    <input type="text" class="form-control" id="InputColor" placeholder="Color">
+							  </div>
+							</form>
+							<div class="modal-footer">
+								<a href="" class="btn btn-primary" data-dismiss="modal">Close</a>
+								<a href="" class="btn btn-danger" data-dismiss="modal">Save</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<p class="boxFooter-tittle">Alejandro Glz</p>	
+			<p class="boxFooter-text">[21-abril-2017]</p>
+        </div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

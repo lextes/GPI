@@ -1,0 +1,217 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+* {
+    border: px solid red !important;
+}
+
+header{
+	margin:50px auto; 
+	width: 1200px;
+	height: 100px;
+}
+
+h3{
+	color:#087AB8;
+}
+
+form{
+	margin: 40px;
+}
+
+.pull-right {
+  float: right; !important;
+}
+
+.table {
+	margin-top: 45px;
+	margin-left: 20px;
+	padding: 120px;
+}
+
+th {
+	background-color: #087AB8;
+	color:white;
+}
+
+td{
+	color: #087AB8;
+}
+
+.icon-theme{
+	display: ;
+	padding-top: 5px;
+	text-align:right;
+} 
+
+div.contenedor{
+	display: inline-block;
+	width: 291px;
+	height: 230px;
+	margin-bottom: 50px;
+	
+	-webkit-transition:height .5s;
+	-webkit-border-radius:10px;
+}
+
+div#uno{
+	background-color: rgb(208,101,3);
+}
+
+div#dos{
+	background-color: rgb(42,147,24);
+}
+
+div#tres{
+	background-color: rgb(22,145,190);
+}
+div#cuatro{
+	background-color: rgb(22,107,162);
+}
+
+img.icon{
+	display: block;
+	margin:50px auto;
+	background-color:rgba(255,255,255,.15); 
+	width: 85px;
+	padding: 20px;
+	-webkit-border-radius:100%; /*para que el cuadro se ponga redondo*/
+	-webkit-box-shadow:0px 0px 0px 30px rgba(255,255,255,0);
+	-webkit-transition:box-shadow .6s;
+}
+.parr{
+	padding:10px;
+	line-height:2.13em;
+	font-size: 2em;
+}
+
+.recuadro{
+	display: block;
+	background-color: rgb(123,34,64);
+	padding: 22px;
+	color:white;
+}
+
+p.texto{
+	font-size: 1.2em;
+	font-family: 'Lato', sans-serif;
+	color:#7C0029;
+	text-align: left;
+	padding-top: 10px;
+	opacity:.6;
+	-webkit-transition: padding-top .4s; /*este es para la transicion del texto para que baje suave */
+}
+
+a.texto{
+	font-size: 4em;
+	color:white;
+	margin-left: 70px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	opacity:.5;
+	-webkit-transition: padding-top .4s; /*este es para la transicion del texto para que baje suave */
+}
+
+a.texto1{
+	font-size: 4em;
+	font-family: 'Lato', sans-serif;
+	color:white;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	opacity:.5;
+	-webkit-transition: padding-top .4s; /*este es para la transicion del texto para que baje suave */
+}
+
+
+
+div.contenedor:hover{
+	height: 250px;
+}
+
+
+
+/*Aqui se agrega otro div para que afecte a la clase de p.texto solamente, para que baje tambien al igual que el cuadro*/
+
+div.contenedor:hover p.texto{
+	padding-top:30px; 
+	opacity: 1;
+}
+
+div.contenedor:hover a.texto{
+	padding-top:30px; 
+	opacity: 1;
+}
+
+div.contenedor:hover a.texto1{
+	padding-top:30px; 
+	opacity: 1;
+}
+
+
+div.contenedor:hover img.icon{ /*este hover afectara solo a la clase de img.icon*/
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.3);
+}
+
+.title{
+	text-align: left;
+	margin-left: 90px;
+}
+
+.backfooter {
+	margin:0px;
+	color: white;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+.boxFooter-tittle {
+	margin-top: 20px;
+	font-size: 2.5em;
+	color:#BCBCBC;
+	text-align:right;
+}
+
+.boxFooter-text{
+	font-size: 1.52em;
+	color:#BCBCBC;
+	text-align:right;
+}
+
+
+
+footer {
+	width: 100%;
+	height: 160px;
+	background: #087AB8;
+	
+	position: absolute;
+	bottom: 0;
+}
+
+
+.footer-right {
+	margin-top: 25px;
+	text-align: right;
+	padding-right: 242px;
+	font-size: 13px;
+}
+
+.top-logo{
+	margin-bottom: 100px;
+}
+
+a.nounderline:link{   
+	text-decoration:none;   
+}   
+
+
+.textHov:hover{   
+	   color: #BDBBBB;
+}
+ 
+
+
