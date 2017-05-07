@@ -1,4 +1,4 @@
-angular.module('project').value('projectListValue', [
+[
   {
     name: 'Maggie',
     firstName:'Coleman',
