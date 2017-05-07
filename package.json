@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lextes/GPI/issues"
   },
-  "homepage": "https://github.com/lextes/GPI#readme"
+  "homepage": "https://github.com/lextes/GPI#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
