@@ -4,7 +4,7 @@
 
 ### Instalacion 
 
-Impotante. Antes de ejecutar este repositorio instalar dependencias
+Importante. Antes de ejecutar este repositorio instalar dependencias
 
 ```
 npm install
