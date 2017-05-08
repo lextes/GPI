@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html  ng-app="ejercicio">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
   	<link rel="shortcut icon" href="images/favicon.ico">
   	<title>Ejercicio GPI</title>
   	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,900' rel='stylesheet' type='text/css'>
-  	<script src="js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 
-<body>
-	<!-- angular -->
- 	<div ng-app="App">
-		<div ng-controller="MainController">
-		</div>
-        </div>
-       <!-- angular -->
-
+<body ng-app="App">
+	
 	<div class="container" style="margin-top: 40px;">
 		 <div class="row"> 
             <div class="col-md-6">
@@ -33,7 +26,7 @@
             </div>
         </div>
     </div>
-	<div class="container">
+	<div class="container" ng-controller="MainController">
 		<div class="tab-content">
 			<div class="tab-pane fade in active" id="add">
             
@@ -48,22 +41,22 @@
                 </div>
 				
                 <!-- TAB Add persons -->
-                <form>
+                <form ng-submit="registerPerson(person)">
 				  <div class="form-group">
-				    <label for="InputName">Name</label>
-				    <input type="text" class="form-control " id="InputName" placeholder="Name">
+				    <label>Name</label>
+				    <input type="text" class="form-control" placeholder="Name" ng-model="person.name">
 				  </div><br />
 				  <div class="form-group">
-				    <label for="exampleInputName2">First Name</label>
-				    <input type="text" class="form-control" id="InputName" placeholder="First Name">
+				    <label>First Name</label>
+				    <input type="text" class="form-control" placeholder="First Name" ng-model="person.firstName">
 				  </div><br />
 				  <div class="form-group">
-				    <label for="InputName3">Second Name</label>
-				    <input type="text" class="form-control" id="InputName3" placeholder="Second Name">
+				    <label>Second Name</label>
+				    <input type="text" class="form-control" placeholder="Last Name" ng-model="person.lastName">
 				  </div><br />
 				  <div class="form-group">
-				    <label for="InputBirth">Birth date</label>
-				    <input type="text" class="form-control" id="InputBirth" placeholder="Birth date">
+				    <label>Birth date</label>
+				    <input type="text" class="form-control" placeholder="Birth date" ng-model="person.birthday">
 				  </div>
 				  <button type="submit" class="btn btn-primary pull-right">Register</button>
 				</form>
@@ -85,42 +78,18 @@
 				<table class="table table-hover">
 					<tr>
 						<th>Name</th>
+						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Second Name</th>
                         <th>Birth</th>
                         <th>Edit</th>                     
 					</tr>
-					<tr>
-						<td><a href="#editPerson" data-toggle="tab">Maggie</a></td>
-						<td><a href="#editPerson" data-toggle="tab">Coleman</a></td>
-						<td><a href="#editPerson" data-toggle="tab">Trump</a></td>
-                        <td><a href="#editPerson" data-toggle="tab">5/02/1970</a></td>
-                        <td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>Houston</td>
-						<td>Have</td>
-						<td>Trump</td>
-                        <td>13/12/2000</td>
-                        <td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>Stephanie</td>
-						<td>Calamargo</td>
-						<td>Tutis</td>
-                        <td>20/10/1980</td>
-                        <td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>Hope</td>
-						<td>Resendiz</td>
-						<td>Icaro</td>
-                        <td>7/8/1990</td>
-                        <td><input type="checkbox"></td>
+					<tr ng-repeat="p in persons">
+						<td><a href="#" data-toggle="modal" data-target="#dialog-edit-person" ng-click="editPerson(p, $index)">{{p.name}}</a></td>
+						<td>{{p.firstName}}</a></td>
+						<td>{{p.lastName}}</a></td>
+                        <td>{{p.birthday}}</a></td>
 					</tr>
 				</table>
-
-               <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-2">Edit</button>
 			</div>
 
             <!-- Popup box for Persons -->
