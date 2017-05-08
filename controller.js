@@ -66,8 +66,10 @@ $scope.updatePerson = function(p){
     $('#dialog-edit-person').modal('hide');
   }
 
-
-
-
+$scope.addCar = function(car){
+    var p = $scope.persons[selectedIndex];
+    p.cars.push(car);
+    $('#dialog-edit-person').modal('hide');
+  }
 
 });
