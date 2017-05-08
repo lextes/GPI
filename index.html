@@ -132,34 +132,37 @@
 									</div>
 	                            </form>
 	                            
-	                            <form class="form-group">
+	                            <form ng-submit="addCar(newcar)">
 	                                <h3>Register a car</h3>
 	                                <div class="form-group">
-	                                    <label for="InputBrand">Brand</label>
-	                                    <input type="text" class="form-control" id="InputBrand" placeholder="Brand">
+	                                    <label>Brand</label>
+	                                    <input type="text" class="form-control" placeholder="Brand" ng-model="newcar.brand">
 	                                </div>
 	                                <div class="form-group">
-	                                    <label for="InputNModel">Model </label>
-	                                    <input type="text" class="form-control" id="InputModel" placeholder="Model">
+	                                    <label>Model</label>
+	                                    <input type="text" class="form-control" placeholder="Model" ng-model="newcar.model">
 	                                </div>
 	                                <div class="form-group">
-	                                    <label for="InputYear">Year</label>
-	                                    <input type="text" class="form-control" id="InputYear" placeholder="Year">
+	                                    <label>Year</label>
+	                                    <input type="text" class="form-control" placeholder="Year" ng-model="newcar.year">
 	                                </div>
 	                                <div class="form-group">
-	                                    <label for="InputColor">Color</label>
-	                                    <input type="text" class="form-control" id="InputColor" placeholder="Color">
+	                                    <label>Color</label>
+	                                    <input type="text" class="form-control" placeholder="Color" ng-model="newcar.color">
 	                                </div>
+	                                <div class="form-group">
+										<div class="pull-right">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-danger">Update</button>
+										</div>
+									</div>
 	                            </form>
-	                            <div class="modal-footer">
-	                                <a href="" class="btn btn-primary" data-dismiss="modal">Close</a>
-	                                <a href="" class="btn btn-danger" data-dismiss="modal">Save</a>
-	                            </div>
 	                        </div>
-                    </div>
-                </div>
-            </div>
-		
+	                    </div>
+    	            </div>
+        	    </div>
+			</div>
+
             <!-- TAB Persons Cars -->
 			<div class="tab-pane fade" id="personsCar">
 
@@ -175,33 +178,15 @@
             	<table class="table table-hover">
 					<tr>
 						<th>Name</th>
+						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Second Name</th>
 						<th>Registered cars</th>
 					</tr>
-					<tr>
-						<td><a href="#edit" data-toggle="tab">Houston</a></td>
-						<td><a href="#edit" data-toggle="tab">Have</a></td>
-						<td><a href="#edit" data-toggle="tab">Trouble</a></td>
-						<td>3</td>
-					</tr>
-					<tr>
-						<td>Maggie</td>
-						<td>Coleman</td>
-						<td>Trump</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td>Stephanie</td>
-						<td>Calamargo</td>
-						<td>Tutis</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td>Hope</td>
-						<td>Resendiz</td>
-						<td>Icaro</td>
-						<td>3</td>
+					<tr ng-repeat="p in persons">
+						<td><a href="#edit" data-toggle="tab">{{p.name}}</a></td>
+						<td>{{p.firstName}}</td>
+						<td>{{p.lastName}}</td>
+						<td>{{p.cars.length}}</td>
 					</tr>
 				</table>
 			</div>
@@ -268,20 +253,20 @@
 
 							<form>
 							  <div class="form-group">
-							    <label for="InputBrand">Brand</label>
-							    <input type="text" class="form-control" id="InputBrand" placeholder="Brand">
+							    <label>Brand</label>
+							    <input type="text" class="form-control" placeholder="Brand">
 							  </div>
 							  <div class="form-group">
 							    <label for="InputModel">Model</label>
-							    <input type="text" class="form-control" id="InputModel" placeholder="Model">
+							    <input type="text" class="form-control" placeholder="Model">
 							  </div>
 							  <div class="form-group">
 							    <label for="InputYear">Year</label>
-							    <input type="text" class="form-control" id="InputYear" placeholder="Year">
+							    <input type="text" class="form-control" placeholder="Year">
 							  </div>
 							  <div class="form-group">
 							    <label for="InputColor">Color</label>
-							    <input type="text" class="form-control" id="InputColor" placeholder="Color">
+							    <input type="text" class="form-control" placeholder="Color">
 							  </div>
 							</form>
 							<div class="modal-footer">
