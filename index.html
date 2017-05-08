@@ -41,30 +41,30 @@
                 </div>
 				
                 <!-- TAB Add persons -->
-                <form>
-				  <div ng-app="App">
-					  <div ng-controller="MainController" class="form-group">
-					    <label for="InputName">Name</label>
-					    <input ng-model="person.name" type="text" class="form-control" id="InputName" placeholder="Name">
-					    
-					  </div><br />
-					  <div class="form-group" ng-controller="MainController">
-					    <label for="exampleInputName2">First Name</label>
-					    <input ng-model="person.firstName"type="text" class="form-control" id="InputName" placeholder="First Name">
-					  </div><br />
-					  <div class="form-group" ng-controller="MainController">
-					    <label for="InputName3">Second Name</label>
-					    <input ng-model="person.secondName" type="text" class="form-control" id="InputName3" placeholder="Second Name">
-					  </div><br />
-					  <div class="form-group" ng-controller="MainController">
-					    <label for="InputBirth">Birth date</label>
-					    <input ng-model="person.birthday" type="text" class="form-control" id="InputBirth" placeholder="Birth date">
-					  </div>
-					  <button type="submit" class="btn btn-primary pull-right">Register</button>
- 						
-					</div>		
+                <div ng-app="App">
+	                <div ng-controller="MainController">
+		                <form>
+						  <div class="form-group">
+						    <label for="InputName">Name</label>
+						    <input type="text" class="form-control " id="InputName" placeholder="Name">
+						  </div><br />
+						  <div class="form-group">
+						    <label for="exampleInputName2">First Name</label>
+						    <input type="text" class="form-control" id="InputName" placeholder="First Name">
+						  </div><br />
+						  <div class="form-group">
+						    <label for="InputName3">Second Name</label>
+						    <input type="text" class="form-control" id="InputName3" placeholder="Second Name">
+						  </div><br />
+						  <div class="form-group">
+						    <label for="InputBirth">Birth date</label>
+						    <input type="text" class="form-control" id="InputBirth" placeholder="Birth date">
+						  </div>
+						  <button type="submit" class="btn btn-primary pull-right">Register</button>
+						</form>
+					</div>
+				</div>
 
-				</form>
 				
 
 			</div>
