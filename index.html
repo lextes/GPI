@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
   	<link rel="shortcut icon" href="images/favicon.ico">
   	<title>Ejercicio GPI</title>
@@ -12,6 +12,13 @@
 </head>
 
 <body>
+	<!-- angular -->
+ 	<div ng-app="App">
+		<div ng-controller="MainController">
+		</div>
+        </div>
+       <!-- angular -->
+
 	<div class="container" style="margin-top: 40px;">
 		 <div class="row"> 
             <div class="col-md-6">
@@ -317,6 +324,9 @@
         </div>
 	</div>
 </footer>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="controller.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
