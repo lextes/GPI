@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/lextes/GPI#readme",
   "dependencies": {
-    "angular": "~1.4.1",
+    "angular": "~1.7.9",
     "bootstrap": "^3.3.7"
   }
 }
